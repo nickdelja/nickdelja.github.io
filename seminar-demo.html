@@ -70,18 +70,12 @@
 					<small>Created by Coleader</small>
 				</p>
 			</section>
-			 <section>
-				<h3>Provide password</h3>
-				<div>A password is required to host a seminar.</div>
-				<div><input type="password" id="password" style="font-size:70%;" value="123456"></div>
-				<div style="font-size:24px;color:gray;"> In this demo the password is '123456'</div>
-			</section>
 			<section>
 				<h3>Host seminar</h3>
 				<div>Click <a id="host" href="#"><i class="fa fa-users"></i></a> to host the seminar.</div>
 			</section>
 			<section>
-				<h2>Invite clients</h2>
+				<h2>Join!</h2>
 				<div>
 				<canvas id="qrcode" style="width:300px;height:300px;"></canvas>
 				</div>				
@@ -268,12 +262,12 @@ Reveal.initialize({
 
 document.querySelector("#host").addEventListener('click', function(e) {
 	e.preventDefault();
-	RevealSeminar.open_or_join_room(document.getElementById('password').value);
+	RevealSeminar.open_or_join_room("123456");
 });
 
 document.querySelector("#close").addEventListener('click', function(e) {
 	e.preventDefault();
-	RevealSeminar.close_room(document.getElementById('password').value);
+	RevealSeminar.close_room("123456");
 });
 
 </script>
